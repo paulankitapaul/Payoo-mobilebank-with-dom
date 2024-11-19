@@ -1,0 +1,1 @@
+console.log('money is added')
