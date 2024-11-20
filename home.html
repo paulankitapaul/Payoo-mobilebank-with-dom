@@ -1,61 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home-page</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home-page</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
-    <main class="flex justify-center">
-        <div class="mockup-phone">
-            <div class="camera"></div>
-            <div class="display">
-              <div class="artboard artboard-demo phone-3">
-                <div class="stats shadow">
-                    <div class="stat">
-                      <div class="stat-title">Total Money</div>
-                      <div id="total-ammout" class="stat-value">8400</div>
-                      
-                      
-                    </div>
-                    
+  <main class="flex justify-center">
+    <div class="mockup-phone">
+      <div class="camera"></div>
+      <div class="display">
+        <div class="artboard artboard-demo phone-3">
+          <div class="stats shadow">
+            <div class="stat">
+              <div class="stat-title">Total Money</div>
+              <div id="total-ammout" class="stat-value">8400</div>
 
-                  </div>
-                  <div class="divider"></div>
-                  <button class="btn btn-lg">ADD-Money</button>
-                  <br>
-                  <button class="btn btn-lg">Cash-Out</button>
-                  <div class="divider"></div>
-                  <!-- add money form start -->
 
-                  <form class="card-body">
-                    <div class="form-control">
-                      <label class="label">
-                        <span class="label-text">Ammount</span>
-                      </label>
-                      <input id="added-money" type="text" placeholder="Ammount" class="input input-bordered" required />
-                    </div>
-                    <div class="form-control">
-                      <label class="label">
-                        <span class="label-text">Pin Number</span>
-                      </label>
-                      <input id="pin-number" type="password" placeholder="Enter your Pin-Number" class="input input-bordered" autocomplete="off" required />
-                      <label class="label">
-                        <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
-                      </label>
-                    </div>
-                    <div class="form-control mt-6">
-                      <button id="add-money-btn" class="btn btn-primary">Add_Money</button>
-                    </div>
-                  </form>
-                   <!-- Add money form end -->
-                    
-              </div>
             </div>
+
+
           </div>
-    </main>
-    <script src="js/home.js"></script>
+          <div class="divider"></div>
+          <button id="add-money" class="btn btn-lg">ADD-Money</button>
+          <br>
+          <button id="cash-out" class="btn btn-lg">Cash-Out</button>
+          <div class="divider"></div>
+          <!-- add money form start -->
+
+          <form id="show-addMoney-form" class="card-body">
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Ammount</span>
+              </label>
+              <input id="added-money" type="text" placeholder="Ammount" class="input input-bordered" required />
+            </div>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Pin Number</span>
+              </label>
+              <input id="pin-number" type="password" placeholder="Enter your Pin-Number" class="input input-bordered"
+                autocomplete="off" required />
+              <label class="label">
+                <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+              </label>
+            </div>
+            <div class="form-control mt-6">
+              <button id="add-money-btn" class="btn btn-primary">Add_Money</button>
+            </div>
+          </form>
+          <!-- Add money form end -->
+          <!-- cashout money start -->
+          <form id="show-cash-out-form" class=" hidden card-body">
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Ammount</span>
+              </label>
+              <input id="cashOut-money" type="text" placeholder=" cashout Ammount" class="input input-bordered" required />
+            </div>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Pin Number</span>
+              </label>
+              <input id="cashOut-pin" type="password" placeholder="Enter your Pin-Number" class="input input-bordered"
+                autocomplete="off" required />
+              <label class="label">
+                <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+              </label>
+            </div>
+            <div class="form-control mt-6">
+              <button id="cashOut-money-btn" class="btn btn-primary">cashOut_Money</button>
+            </div>
+          </form>
+          <!-- cashout money end -->
+
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="js/home.js"></script>
+  <script src="js/cashOut.js"></script>
+  <script src="js/toggole.js"></script>
 </body>
+
 </html>
